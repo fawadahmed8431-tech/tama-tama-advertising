@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tam Tam Advertising — Bengaluru's Creative Advertising Agency</title>
+  <meta name="description" content="Bengaluru's Creative Advertising Agency. We specialize in Meta & Google Ads, Influencer Marketing, AI Creative Designs, Performance Marketing, WhatsApp Marketing & Website Designing." />
+  <meta name="keywords" content="advertising agency Bengaluru, digital marketing, meta ads, google ads, influencer marketing, performance marketing, creative agency India" />
+  <meta property="og:title" content="Tam Tam Advertising — Bengaluru's Creative Advertising Agency" />
+  <meta property="og:description" content="Bengaluru's Creative Advertising Agency. We specialize in Meta & Google Ads, Influencer Marketing, AI Creative Designs, Performance Marketing, WhatsApp Marketing & Website Designing." />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════════
+       CURSOR
+  ═══════════════════════════════════════════ -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-follower" id="cursorFollower"></div>
+
+  <!-- ═══════════════════════════════════════════
+       LOADER
+  ═══════════════════════════════════════════ -->
+  <div class="loader" id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">TAM TAM</div>
+      <div class="loader-bar"><div class="loader-progress" id="loaderProgress"></div></div>
+      <div class="loader-text">CRAFTING YOUR EXPERIENCE</div>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════ -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo" data-scroll="home">
+        <img src="logo.jpg" alt="TAM TAM Advertising" class="nav-logo-img" />
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link" data-scroll="home">Home</a></li>
+        <li><a href="#about" class="nav-link" data-scroll="about">About</a></li>
+        <li><a href="#services" class="nav-link" data-scroll="services">Services</a></li>
+        <li><a href="#testimonials" class="nav-link" data-scroll="testimonials">Testimonials</a></li>
+        <li><a href="#contact" class="nav-link" data-scroll="contact">Contact</a></li>
+      </ul>
+
+      <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="nav-cta">
+        LET'S TALK <span class="nav-cta-arrow">→</span>
+      </a>
+
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════
+       MOBILE MENU
+  ═══════════════════════════════════════════ -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-bg"></div>
+    <button class="mobile-menu-close" id="menuClose" aria-label="Close menu">✕</button>
+    <nav class="mobile-nav">
+      <ul>
+        <li><a href="#home" class="mobile-link" data-close>Home</a></li>
+        <li><a href="#about" class="mobile-link" data-close>About</a></li>
+        <li><a href="#services" class="mobile-link" data-close>Services</a></li>
+        <li><a href="#testimonials" class="mobile-link" data-close>Testimonials</a></li>
+        <li><a href="#contact" class="mobile-link" data-close>Contact</a></li>
+      </ul>
+      <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="mobile-cta" data-close>
+        LET'S TALK →
+      </a>
+    </nav>
+    <div class="mobile-menu-footer">
+      <p>Bengaluru, India</p>
+      <p>Est. 2019</p>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════ -->
+  <section class="hero" id="home">
+    <div class="hero-canvas" id="heroCanvas">
+      <canvas id="particleCanvas"></canvas>
+    </div>
+
+    <!-- Cinematic grid overlay -->
+    <div class="hero-grid-overlay"></div>
+
+    <!-- Orbs / glow effects -->
+    <div class="hero-orb hero-orb--1"></div>
+    <div class="hero-orb hero-orb--2"></div>
+    <div class="hero-orb hero-orb--3"></div>
+
+    <!-- Abstract shapes -->
+    <div class="hero-shape hero-shape--ring"></div>
+    <div class="hero-shape hero-shape--ring2"></div>
+    <div class="hero-shape hero-shape--dot-grid"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow reveal-up">
+        <span class="eyebrow-line"></span>
+        BENGALURU · INDIA · EST. 2019
+        <span class="eyebrow-line"></span>
+      </div>
+
+      <h1 class="hero-headline">
+        <span class="hero-hl-line reveal-up" style="--delay:0.1s">WE DON'T JUST</span>
+        <span class="hero-hl-line reveal-up" style="--delay:0.2s">BUILD BRANDS.</span>
+        <span class="hero-hl-line hero-hl-outline reveal-up" style="--delay:0.3s">WE MAKE THEM</span>
+        <span class="hero-hl-line hero-hl-gradient reveal-up" style="--delay:0.4s">IMPOSSIBLE</span>
+        <span class="hero-hl-line reveal-up" style="--delay:0.5s">TO IGNORE.</span>
+      </h1>
+
+      <p class="hero-sub reveal-up" style="--delay:0.6s">
+        Ideas that capture attention. Strategies that drive growth.<br />Experiences that leave an impact.
+      </p>
+
+      <div class="hero-actions reveal-up" style="--delay:0.75s">
+        <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="btn btn--primary">
+          LET'S GROW YOUR BRAND <span>→</span>
+        </a>
+        <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="btn btn--whatsapp">
+          <span class="wa-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </span>
+          CHAT ON WHATSAPP
+        </a>
+      </div>
+
+      <div class="hero-scroll-indicator reveal-up" style="--delay:1s">
+        <div class="scroll-line"></div>
+        <span>SCROLL</span>
+      </div>
+    </div>
+
+    <!-- Hero image collage (right side) -->
+    <div class="hero-visual reveal-right" style="--delay:0.4s">
+      <div class="hero-img-stack">
+        <div class="hero-img hero-img--1">
+          <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=80&auto=format" alt="Creative strategy" loading="lazy" />
+        </div>
+        <div class="hero-img hero-img--2">
+          <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=400&q=80&auto=format" alt="Digital advertising" loading="lazy" />
+        </div>
+        <div class="hero-img hero-img--3">
+          <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=400&q=80&auto=format" alt="Brand growth" loading="lazy" />
+        </div>
+        <div class="hero-img-badge">
+          <span class="badge-year">2019</span>
+          <span class="badge-label">EST.</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       MARQUEE STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>META ADS</span><span class="marquee-dot">✦</span>
+      <span>GOOGLE ADS</span><span class="marquee-dot">✦</span>
+      <span>INFLUENCER MARKETING</span><span class="marquee-dot">✦</span>
+      <span>AI CREATIVE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>PERFORMANCE MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WHATSAPP MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WEBSITE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>BRAND STRATEGY</span><span class="marquee-dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>META ADS</span><span class="marquee-dot">✦</span>
+      <span>GOOGLE ADS</span><span class="marquee-dot">✦</span>
+      <span>INFLUENCER MARKETING</span><span class="marquee-dot">✦</span>
+      <span>AI CREATIVE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>PERFORMANCE MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WHATSAPP MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WEBSITE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>BRAND STRATEGY</span><span class="marquee-dot">✦</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ═══════════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="about-bg-text">ABOUT</div>
+
+    <div class="container">
+      <div class="about-grid">
+        <!-- Left: Visual -->
+        <div class="about-visual reveal-left">
+          <div class="about-img-main">
+            <img src="https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=700&q=80&auto=format" alt="Creative team at work" loading="lazy" />
+            <div class="about-img-overlay"></div>
+          </div>
+          <div class="about-img-float">
+            <img src="https://images.unsplash.com/photo-1553484771-371a605b060b?w=400&q=80&auto=format" alt="Strategy session" loading="lazy" />
+          </div>
+          <div class="about-est-badge">
+            <div class="est-ring"></div>
+            <div class="est-content">
+              <span class="est-year">2019</span>
+              <span class="est-label">EST.</span>
+              <span class="est-city">BENGALURU</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Content -->
+        <div class="about-content">
+          <div class="section-label reveal-up">// ABOUT THE AGENCY</div>
+          <h2 class="section-heading reveal-up">
+            CREATIVITY<br/>
+            WITHOUT LIMITS.<br/>
+            <span class="heading-outline">RESULTS WITHOUT</span><br/>
+            <span class="heading-gradient">COMPROMISE.</span>
+          </h2>
+
+          <div class="about-text reveal-up">
+            <p>
+              Founded in 2019, Tam Tam Advertising brings together creativity, technology, and performance marketing to help ambitious brands grow in the digital world.
+            </p>
+            <p>
+              We believe great advertising isn't just about being seen. It's about being remembered.
+            </p>
+          </div>
+
+          <div class="about-stats reveal-up">
+            <div class="stat-item">
+              <span class="stat-num" data-target="5">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Years of Excellence</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="100">0</span><span class="stat-suffix">+</span>
+              <span class="stat-label">Brands Elevated</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <span class="stat-num" data-target="6">0</span><span class="stat-suffix"></span>
+              <span class="stat-label">Core Capabilities</span>
+            </div>
+          </div>
+
+          <div class="about-location reveal-up">
+            <span class="location-icon">📍</span>
+            <span>EST. 2019 — BENGALURU, INDIA</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SERVICES
+  ═══════════════════════════════════════════ -->
+  <section class="services" id="services">
+    <div class="services-bg-gradient"></div>
+
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">// WHAT WE DO</div>
+        <h2 class="section-heading">
+          OUR <span class="heading-gradient">EXPERTISE</span>
+        </h2>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-item reveal-up" style="--delay:0.05s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1611162616305-c69b3fa7fbe0?w=600&q=80&auto=format" alt="Meta & Google Ads" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">01</span>
+            <h3 class="service-title">META &amp; GOOGLE ADS</h3>
+            <p class="service-desc">Strategic campaigns designed to reach the right audience and deliver meaningful business growth.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="service-item reveal-up" style="--delay:0.1s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80&auto=format" alt="Influencer Marketing" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">02</span>
+            <h3 class="service-title">INFLUENCER MARKETING</h3>
+            <p class="service-desc">Connecting brands with powerful voices that build trust, awareness, and engagement.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="service-item reveal-up" style="--delay:0.15s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80&auto=format" alt="AI Creative Designs" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">03</span>
+            <h3 class="service-title">AI-DRIVEN CREATIVE DESIGNS</h3>
+            <p class="service-desc">Next-generation creativity powered by innovative ideas and intelligent technology.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="service-item reveal-up" style="--delay:0.2s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80&auto=format" alt="Performance Marketing" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">04</span>
+            <h3 class="service-title">PERFORMANCE MARKETING</h3>
+            <p class="service-desc">Data-driven strategies focused on leads, conversions, and measurable growth.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="service-item reveal-up" style="--delay:0.25s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1611746872915-64382b5c76da?w=600&q=80&auto=format" alt="WhatsApp Marketing" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">05</span>
+            <h3 class="service-title">WHATSAPP MARKETING</h3>
+            <p class="service-desc">Build stronger customer relationships and create meaningful conversations at scale.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+        <div class="service-item reveal-up" style="--delay:0.3s">
+          <div class="service-img">
+            <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&q=80&auto=format" alt="Website Designing" loading="lazy" />
+            <div class="service-img-overlay"></div>
+          </div>
+          <div class="service-content">
+            <span class="service-num">06</span>
+            <h3 class="service-title">WEBSITE DESIGNING</h3>
+            <p class="service-desc">Beautiful, fast, modern digital experiences designed to impress and convert.</p>
+            <div class="service-arrow">→</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       TESTIMONIALS
+  ═══════════════════════════════════════════ -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">// CLIENT REVIEWS</div>
+        <h2 class="section-heading">
+          DON'T JUST TAKE <br/><span class="heading-gradient">OUR WORD</span> FOR IT.
+        </h2>
+        <p class="section-sub">Hear from the brands and partners we've helped grow.</p>
+      </div>
+
+      <div class="testimonials-grid">
+        <!-- Card 1 -->
+        <div class="testimonial-card glass reveal-up" style="--delay:0.05s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"The most creative and professional team we've worked with. They completely transformed our brand identity and exceeded all our expectations."</p>
+          <div class="testimonial-author">
+            <h4>Sarah J.</h4>
+            <span>Marketing Director</span>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="testimonial-card glass reveal-up" style="--delay:0.1s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Tam Tam Advertising understood our vision immediately. Their digital campaigns drove our sales up by 150% in just two months!"</p>
+          <div class="testimonial-author">
+            <h4>Rahul D.</h4>
+            <span>E-commerce Founder</span>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="testimonial-card glass reveal-up" style="--delay:0.15s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Exceptional quality of work and brilliant communication. They don't just execute; they bring innovative ideas to the table that really make a difference."</p>
+          <div class="testimonial-author">
+            <h4>Priya S.</h4>
+            <span>Brand Manager</span>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="testimonial-card glass reveal-up" style="--delay:0.2s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"We partnered with Tam Tam for a complete rebrand, and the results were nothing short of spectacular. Highly recommend them to anyone looking to stand out."</p>
+          <div class="testimonial-author">
+            <h4>Michael T.</h4>
+            <span>CEO</span>
+          </div>
+        </div>
+        
+        <!-- Card 5 -->
+        <div class="testimonial-card glass reveal-up" style="--delay:0.25s">
+          <div class="testimonial-stars">★★★★★</div>
+          <p class="testimonial-text">"Professional, responsive, and insanely creative. The team at Tam Tam goes above and beyond to ensure customer satisfaction. A true partner in our growth."</p>
+          <div class="testimonial-author">
+            <h4>Anita V.</h4>
+            <span>Startup Founder</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       WHY TAM TAM
+  ═══════════════════════════════════════════ -->
+  <section class="why" id="why">
+    <div class="why-bg">
+      <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=1600&q=80&auto=format" alt="Digital universe" loading="lazy" />
+      <div class="why-bg-overlay"></div>
+    </div>
+
+    <div class="container">
+      <div class="why-header reveal-up">
+        <div class="section-label" style="color:rgba(255,255,255,0.6)">// WHY TAM TAM</div>
+        <h2 class="section-heading" style="color:#fff">
+          THE RIGHT IDEA<br/>CAN <span class="heading-gradient">CHANGE</span><br/>EVERYTHING.
+        </h2>
+      </div>
+
+      <div class="why-grid">
+        <div class="why-item reveal-up" style="--delay:0.05s">
+          <div class="why-icon">💡</div>
+          <h3>Creative Thinking</h3>
+          <p>We approach every brief with fresh eyes and bold creative direction that breaks convention.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.1s">
+          <div class="why-icon">📊</div>
+          <h3>Data-Driven Strategy</h3>
+          <p>Every decision is backed by insights, analytics, and performance data that drives real results.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.15s">
+          <div class="why-icon">🤖</div>
+          <h3>AI-Powered Innovation</h3>
+          <p>Harnessing the power of artificial intelligence to supercharge creativity and efficiency.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.2s">
+          <div class="why-icon">🎯</div>
+          <h3>Performance-Focused</h3>
+          <p>We measure success by your business growth — not just impressions and vanity metrics.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.25s">
+          <div class="why-icon">✂️</div>
+          <h3>Tailored Solutions</h3>
+          <p>Every brand is unique. We craft custom strategies that fit your goals, market, and audience.</p>
+        </div>
+        <div class="why-item reveal-up" style="--delay:0.3s">
+          <div class="why-icon">🔥</div>
+          <h3>A Passion for Brands</h3>
+          <p>We don't just work on brands — we become genuinely invested in making them thrive.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       BIG CTA
+  ═══════════════════════════════════════════ -->
+  <section class="big-cta">
+    <div class="big-cta-bg">
+      <div class="big-cta-orb big-cta-orb--1"></div>
+      <div class="big-cta-orb big-cta-orb--2"></div>
+      <div class="big-cta-grid-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="big-cta-content">
+        <div class="section-label reveal-up" style="color:rgba(255,255,255,0.5); text-align:center;">// READY TO BEGIN?</div>
+        <h2 class="big-cta-heading reveal-up">
+          YOUR NEXT BIG<br/><span class="heading-gradient">IDEA</span> STARTS HERE.
+        </h2>
+        <p class="big-cta-sub reveal-up">
+          Have a brand ready to grow? Let's create something extraordinary together.
+        </p>
+        <div class="reveal-up">
+          <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="btn btn--mega">
+            <span class="btn-mega-text">START A CONVERSATION</span>
+            <span class="btn-mega-arrow">→</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ═══════════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <div class="section-label">// FIND US</div>
+        <h2 class="section-heading">
+          GET IN <span class="heading-gradient">TOUCH</span>
+        </h2>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Info -->
+        <div class="contact-info reveal-left">
+          <div class="contact-card glass">
+            <h3>Let's Build Something Great</h3>
+            <p>Ready to take your brand to the next level? Reach out and let's start a conversation.</p>
+
+            <div class="contact-details">
+              <div class="contact-detail">
+                <span class="contact-detail-icon">📍</span>
+                <div>
+                  <strong>Our Office</strong>
+                  <p>No. 10, E-No. 7th Street, Broadway Road Cross,<br/>Shivajinagar, Bengaluru</p>
+                </div>
+              </div>
+              <div class="contact-detail">
+                <span class="contact-detail-icon">📱</span>
+                <div>
+                  <strong>WhatsApp / Call</strong>
+                  <p><a href="https://wa.me/919980267984" target="_blank" rel="noopener">+91 99802 67984</a></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-actions">
+              <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="btn btn--primary">
+                CHAT ON WHATSAPP →
+              </a>
+              <a href="https://maps.app.goo.gl/wLH4UHHQmrz9hsDy8?g_st=ac" target="_blank" rel="noopener" class="btn btn--outline">
+                GET DIRECTIONS →
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Map embed -->
+        <div class="contact-map reveal-right">
+          <div class="map-wrapper glass">
+            <div class="map-header">
+              <span class="map-pin">📍</span>
+              <div>
+                <strong>Tam Tam Advertising</strong>
+                <p>Shivajinagar, Bengaluru</p>
+              </div>
+            </div>
+            <div class="map-embed">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.8590834697766!2d77.59!3d12.979!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTLCsDU4JzQ0LjQiTiA3N8KwMzUnMjQuMCJF!5e0!3m2!1sen!2sin!4v1620000000000!5m2!1sen!2sin"
+                width="100%"
+                height="300"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                title="Tam Tam Advertising Office Location">
+              </iframe>
+            </div>
+            <a href="https://maps.app.goo.gl/wLH4UHHQmrz9hsDy8?g_st=ac" target="_blank" rel="noopener" class="map-directions-btn">
+              🗺 OPEN IN GOOGLE MAPS →
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <div class="footer-logo">
+              <span class="logo-tam">TAM</span><span class="logo-dot">●</span><span class="logo-tam2">TAM</span>
+            </div>
+            <p class="footer-tagline">We Don't Just Build Brands.<br/>We Make Them Impossible to Ignore.</p>
+            <div class="footer-socials">
+              <a href="https://wa.me/919980267984" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links-group">
+            <h4>Navigation</h4>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#work">Work</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-group">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#services">Meta &amp; Google Ads</a></li>
+              <li><a href="#services">Influencer Marketing</a></li>
+              <li><a href="#services">AI Creative Designs</a></li>
+              <li><a href="#services">Performance Marketing</a></li>
+              <li><a href="#services">WhatsApp Marketing</a></li>
+              <li><a href="#services">Website Designing</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-contact-info">
+            <h4>Contact</h4>
+            <p>No. 10, E-No. 7th Street,<br/>Broadway Road Cross,<br/>Shivajinagar, Bengaluru</p>
+            <a href="https://wa.me/919980267984" target="_blank" rel="noopener" class="footer-wa">+91 99802 67984</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; 2026 Tam Tam Advertising. All Rights Reserved. Bengaluru, India.</p>
+        <p class="footer-credit">Crafted with passion ✦</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════════
+       FLOATING WHATSAPP BUTTON
+  ═══════════════════════════════════════════ -->
+  <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="wa-float" aria-label="Chat on WhatsApp">
+    <div class="wa-float-pulse"></div>
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float-label">Chat with us</span>
+  </a>
+
+  <!-- ═══════════════════════════════════════════
+       SCRIPTS
+  ═══════════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+</body>
+</html>

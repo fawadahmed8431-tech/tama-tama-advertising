@@ -1,0 +1,186 @@
+/* ─────────────────────────────────────────────
+   Additional animations & effects — separate
+   file to keep style.css manageable
+───────────────────────────────────────────── */
+
+/* Smooth scroll offset for fixed nav */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+/* Active nav link glow */
+.nav-link.active {
+  color: #fff;
+}
+
+/* Service item first/last rounded corners */
+.services-grid .service-item:first-child { border-top-left-radius: 20px; border-bottom-left-radius: 20px; }
+.services-grid .service-item:last-child { border-top-right-radius: 20px; border-bottom-right-radius: 20px; }
+
+/* Gradient text shimmer on heading hover */
+.section-heading:hover .heading-gradient {
+  animation: shimmer 1.5s linear;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* Parallax tilt on hero cards */
+.hero-img-stack .hero-img {
+  will-change: transform;
+}
+
+/* Service item border on hover */
+.service-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border: 2px solid transparent;
+  transition: border-color 0.4s ease;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.service-item:hover::after {
+  border-color: rgba(255,107,53,0.3);
+}
+
+/* Work item number overlay */
+.work-item::before {
+  content: attr(data-num);
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 60px;
+  color: rgba(255,255,255,0.06);
+  z-index: 1;
+  pointer-events: none;
+  transition: color 0.4s ease;
+}
+
+/* Animated underline for footer links */
+.footer-links-group a {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-links-group a::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: linear-gradient(90deg, #ff6b35, #9b5de5);
+  transition: width 0.3s ease;
+}
+
+.footer-links-group a:hover::after {
+  width: 100%;
+}
+
+/* Glowing top border on why-items */
+.why-item:nth-child(odd)::before {
+  background: linear-gradient(90deg, #ff6b35, #9b5de5);
+}
+.why-item:nth-child(even)::before {
+  background: linear-gradient(90deg, #00d4ff, #9b5de5);
+}
+
+/* Section divider decoration */
+.section-header::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #ff6b35, #9b5de5);
+  margin: 20px auto 0;
+  border-radius: 2px;
+}
+
+/* Big CTA section line ornament */
+.big-cta-heading::after {
+  content: none;
+}
+
+/* Floating WA button ring on hover */
+.wa-float::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 100px;
+  border: 2px solid rgba(37,211,102,0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.wa-float:hover::after { opacity: 1; }
+
+/* Hero content text shadow */
+.hero-headline { text-shadow: 0 2px 60px rgba(0,0,0,0.5); }
+
+/* Contact card left accent */
+.contact-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(to bottom, #ff6b35, #9b5de5, #00d4ff);
+  border-radius: 3px 0 0 3px;
+}
+
+/* Map dark overlay pattern */
+.map-embed::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(6,8,16,0.05);
+  pointer-events: none;
+}
+
+/* Loader dots */
+.loader-text::after {
+  content: '';
+  animation: ellipsis 1.5s steps(4, end) infinite;
+}
+
+@keyframes ellipsis {
+  0%   { content: ''; }
+  25%  { content: '.'; }
+  50%  { content: '..'; }
+  75%  { content: '...'; }
+}
+
+/* Enhanced mobile experience */
+@media (max-width: 600px) {
+  .about-stats {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+  .stat-divider { width: 60px; height: 1px; }
+  
+  .hero-eyebrow {
+    font-size: 10px;
+    gap: 10px;
+  }
+  
+  .eyebrow-line { max-width: 24px; }
+}
+
+/* Print styles */
+@media print {
+  .nav, .loader, .cursor, .cursor-follower,
+  .wa-float, .nav-hamburger { display: none !important; }
+  body { background: white; color: black; }
+}
