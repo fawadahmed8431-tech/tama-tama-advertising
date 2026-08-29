@@ -26,7 +26,7 @@
   --font-body:    'Space Grotesk', 'Inter', sans-serif;
   --font-serif:   'Playfair Display', Georgia, serif;
 
-  --nav-h:        72px;
+  --nav-h:        88px;
   --radius:       16px;
   --radius-lg:    28px;
   --shadow-glow:  0 0 60px rgba(155,93,229,0.3);
@@ -212,14 +212,16 @@ body:has(button:hover) .cursor-follower {
   padding: 0 32px;
   display: flex;
   align-items: center;
-  transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
+  background: rgba(4, 6, 12, 0.92);
+  backdrop-filter: blur(24px) saturate(1.5);
+  -webkit-backdrop-filter: blur(24px) saturate(1.5);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+  transition: all 0.4s ease;
 }
 
 .nav.scrolled {
-  background: rgba(6,8,16,0.88);
-  backdrop-filter: blur(24px) saturate(1.5);
-  -webkit-backdrop-filter: blur(24px) saturate(1.5);
-  box-shadow: 0 1px 0 rgba(255,255,255,0.06);
+  background: rgba(4, 6, 12, 0.98);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
 .nav-container {
@@ -240,7 +242,7 @@ body:has(button:hover) .cursor-follower {
 .nav-logo:hover { opacity: 0.85; }
 
 .nav-logo-img {
-  height: clamp(52px, 6vw, 66px);
+  height: clamp(68px, 9vw, 82px);
   width: auto;
   object-fit: contain;
   display: block;
@@ -320,6 +322,8 @@ body:has(button:hover) .cursor-follower {
   cursor: none;
   padding: 8px;
   margin-left: 16px;
+  transform: scale(1.2);
+  transform-origin: right center;
 }
 
 .nav-hamburger span {
