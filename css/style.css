@@ -645,8 +645,7 @@ body:has(button:hover) .cursor-follower {
 .hero-hl-line { display: block; }
 
 .hero-hl-outline {
-  -webkit-text-stroke: 1.5px rgba(255,255,255,0.35);
-  color: transparent;
+  color: #C8C8CC;
 }
 
 .hero-hl-gradient {
