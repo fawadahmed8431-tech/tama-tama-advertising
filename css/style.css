@@ -1779,10 +1779,20 @@ body:has(button:hover) .cursor-follower {
 }
 
 .social-link:hover {
-  background: #25d366;
-  border-color: #25d366;
   color: var(--c-white);
   transform: translateY(-2px);
+}
+.social-link[aria-label="WhatsApp"]:hover {
+  background: #25d366;
+  border-color: #25d366;
+}
+.social-link[aria-label="Facebook"]:hover {
+  background: #1877F2;
+  border-color: #1877F2;
+}
+.social-link[aria-label="Instagram"]:hover {
+  background: #E1306C;
+  border-color: #E1306C;
 }
 
 .footer-links-group h4 {
