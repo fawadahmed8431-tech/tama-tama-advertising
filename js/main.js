@@ -117,7 +117,6 @@ const Nav = (() => {
   const nav = document.getElementById('nav');
   const hamburger = document.getElementById('hamburger');
   const mobileMenu = document.getElementById('mobileMenu');
-  const menuClose = document.getElementById('menuClose');
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
@@ -173,7 +172,6 @@ const Nav = (() => {
       isMenuOpen ? closeMenu() : openMenu();
     });
 
-    menuClose.addEventListener('click', closeMenu);
 
     // Close on link click
     document.querySelectorAll('[data-close]').forEach(link => {
@@ -677,3 +675,4 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   `;
   document.head.appendChild(style);
 }
+

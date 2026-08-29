@@ -367,30 +367,7 @@ body:has(button:hover) .cursor-follower {
 
 .mobile-menu.open .mobile-menu-bg { transform: scaleY(1); }
 
-.mobile-menu-close {
-  position: absolute;
-  top: 24px;
-  right: 32px;
-  background: none;
-  border: none;
-  color: var(--c-white);
-  font-size: 24px;
-  cursor: none;
-  z-index: 1;
-  width: 40px;
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1.5px solid rgba(255,255,255,0.1);
-  transition: all var(--transition);
-}
 
-.mobile-menu-close:hover {
-  background: rgba(255,255,255,0.1);
-  transform: rotate(90deg);
-}
 
 .mobile-nav {
   position: relative;
@@ -1745,7 +1722,7 @@ body:has(button:hover) .cursor-follower {
 
 .footer-logo {
   font-family: var(--font-display);
-  font-size: 28px;
+  font-size: clamp(20px, 6vw, 28px);
   letter-spacing: 0.15em;
   display: flex;
   align-items: center;
@@ -2093,3 +2070,4 @@ body:has(button:hover) .cursor-follower {
 @media (max-width: 380px) {
   .hero-headline { font-size: 40px; }
 }
+
