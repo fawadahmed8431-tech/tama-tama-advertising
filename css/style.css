@@ -240,7 +240,7 @@ body:has(button:hover) .cursor-follower {
 .nav-logo:hover { opacity: 0.85; }
 
 .nav-logo-img {
-  height: 44px;
+  height: clamp(52px, 6vw, 66px);
   width: auto;
   object-fit: contain;
   display: block;
@@ -604,7 +604,7 @@ body:has(button:hover) .cursor-follower {
   position: relative;
   z-index: 5;
   max-width: 800px;
-  padding: 80px 32px 80px;
+  padding: 40px 32px 40px;
   margin-left: max(32px, calc(50vw - var(--container-w)/2));
   padding-left: 32px;
 }
@@ -635,14 +635,14 @@ body:has(button:hover) .cursor-follower {
 /* Headline */
 .hero-headline {
   font-family: var(--font-display);
-  font-size: clamp(56px, 7.5vw, 110px);
+  font-size: clamp(48px, 6.2vw, 92px);
   line-height: 0.92;
   letter-spacing: -0.01em;
   color: var(--c-white);
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .hero-hl-line { display: block; }
@@ -672,7 +672,7 @@ body:has(button:hover) .cursor-follower {
   font-weight: 400;
   line-height: 1.7;
   max-width: 480px;
-  margin-bottom: 44px;
+  margin-bottom: 24px;
 }
 
 /* CTA buttons */
@@ -680,7 +680,7 @@ body:has(button:hover) .cursor-follower {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 56px;
+  margin-bottom: 32px;
 }
 
 /* Scroll indicator */
@@ -723,7 +723,7 @@ body:has(button:hover) .cursor-follower {
 .hero-visual {
   position: absolute;
   right: max(32px, calc(50vw - var(--container-w)/2));
-  top: calc(50% - 50px);
+  top: calc(50% - 110px);
   transform: translateY(-50%);
   z-index: 4;
   width: min(400px, 35vw);
@@ -731,7 +731,7 @@ body:has(button:hover) .cursor-follower {
 
 .hero-img-stack {
   position: relative;
-  height: 520px;
+  height: 420px;
 }
 
 .hero-img {
@@ -761,7 +761,7 @@ body:has(button:hover) .cursor-follower {
 .hero-img--2 {
   width: 200px;
   height: 200px;
-  bottom: 60px;
+  bottom: 0;
   left: 0;
   border: 1px solid rgba(255,255,255,0.1);
   animation: float-img 6s ease-in-out infinite;
@@ -930,7 +930,10 @@ body:has(button:hover) .cursor-follower {
    MARQUEE STRIP
 ═══════════════════════════════════════════════════════════════ */
 .marquee-strip {
-  position: relative;
+  position: absolute;
+  top: var(--nav-h);
+  left: 0;
+  right: 0;
   background: linear-gradient(135deg, rgba(155,93,229,0.15), rgba(0,212,255,0.1));
   border-top: 1px solid rgba(255,255,255,0.06);
   border-bottom: 1px solid rgba(255,255,255,0.06);
@@ -1936,6 +1939,33 @@ body:has(button:hover) .cursor-follower {
   transform: translate(0) !important;
 }
 
+/* ═══════════════════════════════════════════
+   RESPONSIVE - SHORT LAPTOP SCREENS
+═══════════════════════════════════════════ */
+@media (max-height: 900px) and (min-width: 901px) {
+  .hero-content {
+    padding-top: 60px;
+    padding-bottom: 20px;
+  }
+  .hero-headline {
+    font-size: clamp(40px, 5vw, 72px);
+    margin-bottom: 12px;
+  }
+  .hero-sub {
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .hero-actions {
+    margin-bottom: 16px;
+  }
+  .hero-img-stack {
+    height: 360px;
+  }
+  .hero-img--1 { width: 220px; height: 280px; }
+  .hero-img--2 { width: 180px; height: 180px; }
+  .hero-img--3 { width: 140px; height: 140px; }
+}
+
 /* ═══════════════════════════════════════════════════════════════
    RESPONSIVE — TABLET & MOBILE
 ═══════════════════════════════════════════════════════════════ */
@@ -1968,13 +1998,13 @@ body:has(button:hover) .cursor-follower {
   .nav-hamburger { display: flex; margin-left: auto; }
 
   /* Hero layout */
-  .hero { align-items: flex-start; padding-top: calc(var(--nav-h) + 40px); }
+  .hero { align-items: flex-start; padding-top: calc(var(--nav-h) + 40px); flex-direction: column; }
   .hero-content {
     max-width: 100%;
-    padding: 40px 32px 100px;
+    padding: 40px 32px 40px;
     margin-left: 0;
   }
-  .hero-visual { display: none; }
+  .hero-visual { display: none !important; }
 
   .hero-headline { font-size: clamp(52px, 12vw, 80px); }
 
@@ -2004,7 +2034,7 @@ body:has(button:hover) .cursor-follower {
   .nav { padding: 0 20px; }
 
   /* Hero */
-  .hero-content { padding: 32px 20px 80px; }
+  .hero-content { padding: 32px 20px 40px; }
   .hero-headline { font-size: clamp(44px, 14vw, 72px); }
   .hero-sub { font-size: 15px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }

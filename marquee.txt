@@ -1,0 +1,23 @@
+�══
+       MARQUEE STRIP
+  ═══════════════════════════════════════════ -->
+  <div class="marquee-strip">
+    <div class="marquee-track">
+      <span>META ADS</span><span class="marquee-dot">✦</span>
+      <span>GOOGLE ADS</span><span class="marquee-dot">✦</span>
+      <span>INFLUENCER MARKETING</span><span class="marquee-dot">✦</span>
+      <span>AI CREATIVE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>PERFORMANCE MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WHATSAPP MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WEBSITE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>BRAND STRATEGY</span><span class="marquee-dot">✦</span>
+      <!-- duplicate for seamless loop -->
+      <span>META ADS</span><span class="marquee-dot">✦</span>
+      <span>GOOGLE ADS</span><span class="marquee-dot">✦</span>
+      <span>INFLUENCER MARKETING</span><span class="marquee-dot">✦</span>
+      <span>AI CREATIVE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>PERFORMANCE MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WHATSAPP MARKETING</span><span class="marquee-dot">✦</span>
+      <span>WEBSITE DESIGN</span><span class="marquee-dot">✦</span>
+      <span>BRAND STRATEGY</span><span class="marquee-dot">✦</span>
+    </div>
