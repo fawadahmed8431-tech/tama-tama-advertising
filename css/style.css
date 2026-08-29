@@ -1985,7 +1985,7 @@ body:has(button:hover) .cursor-follower {
   .nav-hamburger { display: flex; margin-left: auto; }
 
   /* Hero layout */
-  .hero { align-items: flex-start; padding-top: calc(var(--nav-h) + 40px); flex-direction: column; }
+  .hero { align-items: flex-start; padding-top: calc(var(--nav-h) + 40px); flex-direction: column; min-height: auto; padding-bottom: 40px; }
   .hero-content {
     max-width: 100%;
     padding: 40px 32px 40px;
