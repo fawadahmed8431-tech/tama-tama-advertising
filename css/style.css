@@ -623,7 +623,7 @@ body:has(button:hover) .cursor-follower {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
 }
 
 .hero-hl-line { display: block; }
@@ -1931,15 +1931,13 @@ body:has(button:hover) .cursor-follower {
   }
   .hero-headline {
     font-size: clamp(40px, 5vw, 72px);
-    margin-bottom: 24px;
+    margin-bottom: 12px;
   }
   .hero-sub {
     margin-bottom: 16px;
     font-size: 16px;
   }
-  .hero-actions {
-    margin-bottom: 24px;
-  }
+
   .hero-img-stack {
     height: 360px;
   }
@@ -2017,8 +2015,9 @@ body:has(button:hover) .cursor-follower {
 
   /* Hero */
   .hero-content { padding: 48px 20px 56px; }
-  .hero-headline { font-size: clamp(48px, 15vw, 76px); margin-bottom: 48px; }
-  .hero-actions { flex-direction: column; align-items: flex-start; margin-bottom: 48px; }
+  .hero-headline { font-size: clamp(48px, 15vw, 76px); }
+  .hero-sub { font-size: 15px; margin-bottom: 32px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; }
   .btn { width: 100%; justify-content: center; }
 
   /* About */
