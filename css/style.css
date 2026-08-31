@@ -623,7 +623,7 @@ body:has(button:hover) .cursor-follower {
   display: flex;
   flex-direction: column;
   gap: 4px;
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 
 .hero-hl-line { display: block; }
@@ -1134,7 +1134,7 @@ body:has(button:hover) .cursor-follower {
   display: flex;
   align-items: center;
   gap: 32px;
-  margin-bottom: 36px;
+  margin-bottom: 0;
   padding: 32px;
   background: var(--c-surface);
   border: 1px solid var(--c-border);
@@ -1181,15 +1181,6 @@ body:has(button:hover) .cursor-follower {
   background: var(--c-border);
 }
 
-.about-location {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  color: var(--c-muted);
-  text-transform: uppercase;
-}
 
 /* ═══════════════════════════════════════════════════════════════
    SERVICES SECTION
@@ -1940,14 +1931,14 @@ body:has(button:hover) .cursor-follower {
   }
   .hero-headline {
     font-size: clamp(40px, 5vw, 72px);
-    margin-bottom: 12px;
+    margin-bottom: 24px;
   }
   .hero-sub {
     margin-bottom: 16px;
     font-size: 16px;
   }
   .hero-actions {
-    margin-bottom: 16px;
+    margin-bottom: 24px;
   }
   .hero-img-stack {
     height: 360px;
@@ -2025,11 +2016,17 @@ body:has(button:hover) .cursor-follower {
   .nav { padding: 0 20px; }
 
   /* Hero */
-  .hero-content { padding: 32px 20px 40px; }
-  .hero-headline { font-size: clamp(44px, 14vw, 72px); }
-  .hero-sub { font-size: 15px; }
-  .hero-actions { flex-direction: column; align-items: flex-start; }
+  .hero-content { padding: 48px 20px 56px; }
+  .hero-headline { font-size: clamp(48px, 15vw, 76px); margin-bottom: 48px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; margin-bottom: 48px; }
   .btn { width: 100%; justify-content: center; }
+
+  /* About */
+  .about-visual { display: none !important; }
+  .about-content .heading-outline {
+    -webkit-text-stroke: 0;
+    color: var(--c-muted);
+  }
 
   /* Services */
   .services-grid { grid-template-columns: 1fr; }
@@ -2072,6 +2069,6 @@ body:has(button:hover) .cursor-follower {
 }
 
 @media (max-width: 380px) {
-  .hero-headline { font-size: 40px; }
+  .hero-headline { font-size: 44px; }
 }
 
