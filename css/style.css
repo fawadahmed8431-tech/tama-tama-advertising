@@ -1981,7 +1981,7 @@ body:has(button:hover) .cursor-follower {
   .hero { align-items: flex-start; padding-top: calc(var(--nav-h) + 40px); flex-direction: column; min-height: auto; padding-bottom: 40px; }
   .hero-content {
     max-width: 100%;
-    padding: 40px 32px 40px;
+    padding: 40px 32px 0;
     margin-left: 0;
   }
   .hero-visual { display: none !important; }
@@ -2012,9 +2012,9 @@ body:has(button:hover) .cursor-follower {
 
   .container { padding: 0 20px; }
   .nav { padding: 0 20px; }
-
   /* Hero */
-  .hero-content { padding: 48px 20px 56px; }
+  .hero { padding-bottom: 24px; }
+  .hero-content { padding: 48px 20px 0; }
   .hero-headline { font-size: clamp(48px, 15vw, 76px); }
   .hero-sub { font-size: 15px; margin-bottom: 32px; }
   .hero-actions { flex-direction: column; align-items: flex-start; }
