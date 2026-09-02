@@ -1426,7 +1426,10 @@ body:has(button:hover) .cursor-follower {
 
 .why-header {
   max-width: 640px;
-  margin-bottom: 80px;
+  margin-bottom: 48px;
+}
+.why-header .section-heading {
+  margin-bottom: 0;
 }
 
 .why-grid {
@@ -2035,6 +2038,8 @@ body:has(button:hover) .cursor-follower {
 
 
   /* Why */
+  .why-header { margin-bottom: 32px; }
+  .why-header .section-label { margin-bottom: 12px; }
   .why-grid { grid-template-columns: 1fr; }
 
   /* Big CTA */
