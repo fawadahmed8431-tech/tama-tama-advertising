@@ -95,6 +95,7 @@
         <li><a href="#services" class="nav-link" data-scroll="services">Services</a></li>
         <li><a href="#testimonials" class="nav-link" data-scroll="testimonials">Testimonials</a></li>
         <li><a href="#contact" class="nav-link" data-scroll="contact">Contact</a></li>
+        <li><a href="#" class="nav-link open-enquire-modal">Enquire Now</a></li>
       </ul>
 
       <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="nav-cta">
@@ -119,6 +120,7 @@
         <li><a href="#services" class="mobile-link" data-close>Services</a></li>
         <li><a href="#testimonials" class="mobile-link" data-close>Testimonials</a></li>
         <li><a href="#contact" class="mobile-link" data-close>Contact</a></li>
+      <li><a href="#" class="mobile-link open-enquire-modal" data-close>Enquire Now</a></li>
       </ul>
       <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="mobile-cta" data-close>
         LET'S TALK →
@@ -190,7 +192,7 @@
         Ideas that capture attention. Strategies that drive growth.<br />Experiences that leave an impact.
       </p>
       <div class="hero-actions reveal-up" style="--delay:0.75s">
-        <a href="https://wa.me/919980267984?text=Hi%20Tam%20Tam%20Advertising!%20I'm%20interested%20in%20growing%20my%20business.%20Let's%20talk!" target="_blank" rel="noopener" class="btn btn--primary">
+        <a href="#" id="heroCtaBtn" class="btn btn--primary">
           LET'S GROW YOUR BRAND <span>→</span>
         </a>
 
@@ -691,8 +693,46 @@
        SCRIPTS
   ═══════════════════════════════════════════ -->
   <script src="js/main.js"></script>
+  <!-- Hero CTA Modal -->
+  <div id="heroContactModal" class="hero-modal-overlay">
+    <div class="hero-modal-content glass">
+      <button class="hero-modal-close" id="heroModalClose" aria-label="Close modal">&times;</button>
+      <h3 class="hero-modal-title">Let's Grow Your Brand</h3>
+      <form id="heroContactForm" action="https://formsubmit.co/sajid@tamtamadvertising.in" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_subject" value="New Brand Growth Enquiry">
+        <input type="hidden" name="_template" value="table">
+        
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" name="Name" required placeholder="Enter your full name">
+        </div>
+        <div class="form-group">
+          <label>Company Name</label>
+          <input type="text" name="Company Name" placeholder="Enter your company name">
+        </div>
+        <div class="form-group">
+          <label>Phone Number *</label>
+          <input type="tel" name="Phone" required placeholder="Enter your phone number">
+        </div>
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" name="Email" required placeholder="Enter your email address">
+        </div>
+        <div class="form-group">
+          <label>Message *</label>
+          <textarea name="Message" required rows="3" placeholder="Tell us about your brand..."></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn--primary hero-modal-submit">SEND MESSAGE</button>
+        <div id="heroFormMessage" class="hero-form-message"></div>
+      </form>
+    </div>
+  </div>
 </body>
 </html>
+
+
 
 
 

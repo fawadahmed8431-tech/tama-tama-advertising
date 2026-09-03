@@ -676,3 +676,80 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
   document.head.appendChild(style);
 }
 
+
+// Hero CTA Modal & Form Submission
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('heroContactModal');
+  const openBtns = document.querySelectorAll('#heroCtaBtn, .open-enquire-modal');
+  const closeBtn = document.getElementById('heroModalClose');
+  const form = document.getElementById('heroContactForm');
+  const msgDiv = document.getElementById('heroFormMessage');
+
+  if (modal && closeBtn && form) {
+    // Open modal
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        modal.classList.add('active');
+      });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    // Close modal on outside click
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.remove('active');
+      }
+    });
+
+    // Handle form submission
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      const submitBtn = form.querySelector('.hero-modal-submit');
+      submitBtn.textContent = 'SENDING...';
+      submitBtn.disabled = true;
+      msgDiv.style.display = 'none';
+      
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: {
+          'Accept': 'application/json'
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          msgDiv.style.display = 'block';
+          msgDiv.style.backgroundColor = 'rgba(76, 175, 80, 0.1)';
+          msgDiv.style.color = '#4CAF50';
+          msgDiv.style.border = '1px solid rgba(76, 175, 80, 0.2)';
+          msgDiv.textContent = 'Thank you! Your message has been sent successfully.';
+          form.reset();
+          setTimeout(() => {
+            modal.classList.remove('active');
+            msgDiv.style.display = 'none';
+          }, 4000);
+        } else {
+          throw new Error('Network response was not ok');
+        }
+      })
+      .catch(error => {
+        msgDiv.style.display = 'block';
+        msgDiv.style.backgroundColor = 'rgba(244, 67, 54, 0.1)';
+        msgDiv.style.color = '#F44336';
+        msgDiv.style.border = '1px solid rgba(244, 67, 54, 0.2)';
+        msgDiv.textContent = 'Oops! There was a problem submitting your form. Please try again.';
+      })
+      .finally(() => {
+        submitBtn.textContent = 'SEND MESSAGE';
+        submitBtn.disabled = false;
+      });
+    });
+  }
+});
+
