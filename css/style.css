@@ -2215,20 +2215,20 @@ body:has(button:hover) .cursor-follower {
 ========================================================================== */
 .esteemed-clients {
   position: relative;
-  padding: 80px 0 0;
+  padding: 60px 0 0;
   overflow: hidden;
   background: var(--c-bg);
 }
 
 .clients-header {
-  margin-bottom: 40px;
+  margin-bottom: 24px;
 }
 
 .clients-sub {
   font-size: 18px;
   color: var(--c-muted);
   max-width: 600px;
-  margin: 24px auto 0;
+  margin: 12px auto 0;
   line-height: 1.7;
 }
 
@@ -2237,7 +2237,7 @@ body:has(button:hover) .cursor-follower {
   width: 100%;
   overflow: hidden;
   background: rgba(255, 255, 255, 0.02);
-  padding: 32px 0;
+  padding: 16px 0;
   border-top: 1px solid rgba(255, 255, 255, 0.04);
   border-bottom: 1px solid rgba(255, 255, 255, 0.04);
 }
@@ -2293,17 +2293,20 @@ body:has(button:hover) .cursor-follower {
 
 @media (max-width: 768px) {
   .esteemed-clients {
-    padding: 60px 0 0;
+    padding: 40px 0 0;
   }
   .clients-header {
-    margin-bottom: 32px;
+    margin-bottom: 16px;
+  }
+  .clients-sub {
+    margin-top: 8px;
   }
   .clients-logo {
     height: 80px;
     margin: 0 50px;
   }
   .clients-marquee-wrapper {
-    padding: 24px 0;
+    padding: 12px 0;
   }
 }
 
@@ -2311,4 +2314,14 @@ body:has(button:hover) .cursor-follower {
 
 
 
+
+
+.esteemed-clients + .contact {
+  padding-top: 60px;
+}
+@media (max-width: 768px) {
+  .esteemed-clients + .contact {
+    padding-top: 40px;
+  }
+}
 
