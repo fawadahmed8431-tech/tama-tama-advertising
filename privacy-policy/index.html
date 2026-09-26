@@ -28,6 +28,23 @@
   <link rel="stylesheet" href="/css/style.css" />
 
   <style>
+
+    /* Force normal system mouse cursor across entire Privacy Policy page */
+    html, body {
+      cursor: default !important;
+    }
+    *, *::before, *::after {
+      cursor: inherit;
+    }
+    a, button, [role="button"], .btn, .nav-cta, .nav-hamburger, .nav-logo, .nav-link, .mobile-link, .mobile-cta, .social-link, .wa-float, .hero-modal-close, .hero-modal-submit, .back-home-btn {
+      cursor: pointer !important;
+    }
+    input, textarea, select {
+      cursor: text !important;
+    }
+    .cursor, .cursor-follower {
+      display: none !important;
+    }
     /* Privacy Policy Dedicated Page Styling */
     .policy-page {
       padding-top: calc(var(--nav-h) + 60px);
