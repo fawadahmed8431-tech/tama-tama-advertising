@@ -16,6 +16,7 @@ const Loader = (() => {
   let value = 0;
 
   function init() {
+    if (!loader || !progress) return;
     body.classList.add('loading');
     animateProgress();
   }
@@ -753,3 +754,15 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
+
+// Protocol-aware link routing for local file:/// preview vs http/https deployment
+document.addEventListener('DOMContentLoaded', () => {
+  if (window.location.protocol === 'file:') {
+    document.querySelectorAll('a[href="/privacy-policy"], a[href="/privacy-policy/"]').forEach(a => {
+      a.setAttribute('href', 'privacy-policy.html');
+    });
+    document.querySelectorAll('a[href="/"], a[href="/#home"]').forEach(a => {
+      a.setAttribute('href', 'index.html');
+    });
+  }
+});
